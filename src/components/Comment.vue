@@ -90,7 +90,7 @@ remove (index) {
       let that = this;
       var username = localStorage.getItem('username');
       console.log(username)
-      axios.post(this.$store.state.url + '/findComment',{}).then(function(res){
+      axios.post(this.$store.state.url + '/findCommentAll',{}).then(function(res){
         console.log(res)
         for (let i = 0; i < res.data.message.length; i++) {
             that.data.push({name: '',article:'',content:'',date: '',id:''});
